@@ -1,3 +1,4 @@
+import React from 'react';
 import { Typography, AppBar, Toolbar, useScrollTrigger, Slide } from '@mui/material';
 
 interface Props {
@@ -11,7 +12,7 @@ function HideOnScroll(props: Props) {
     target: window ? window() : undefined,
   });
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Slide appear={false} direction='down' in={!trigger}>
       {children}
     </Slide>
   );
@@ -22,7 +23,7 @@ function Header() {
     <HideOnScroll>
       <AppBar>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant='h6' sx={{ flexGrow: 1 }}>
             Docserver
           </Typography>
         </Toolbar>
@@ -31,4 +32,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;
